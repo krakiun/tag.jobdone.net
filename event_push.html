@@ -1,0 +1,95 @@
+<script>
+window.dataLayer = window.dataLayer || [];
+
+
+// push new member register
+window.dataLayer.push({
+ 'event': 'register_account',
+ 'username' : 'usernamex1',
+ 'register_method' : 'email', // email | facebook | google
+ 'account_type': 'hire',   // hire | work | affiliate | hire_work
+ 'funnel' : 'funnel_id',  //  if exist else none
+ 'agent_referer' : 'referer' // if exist else none
+ });
+
+
+// push new new_deposit
+window.dataLayer.push({
+ 'event': 'new_deposit',
+ 'username': 'usernamex1',
+ 'amount_deposit' : 11.11,
+ });
+
+
+// push new become seller
+window.dataLayer.push({
+ 'event': 'become_seller',
+ 'username': 'usernamex1',
+ });
+
+
+// push new account deleted
+window.dataLayer.push({
+ 'event': 'account_deleted',
+ 'username': 'usernamex1',
+ });
+
+
+// push on new search
+window.dataLayer.push({
+ 'event': 'search_services',
+ 'username' : 'usernamex1',  // if exist else guest
+ 'keyword_search': 'keywords search',
+ });
+
+
+// push on new enquiry
+window.dataLayer.push({
+ 'event': 'new_enquiry',
+ 'username' : 'usernamex1',
+ 'service_id' : 'service_id',
+ });
+
+
+// push on new service added
+window.dataLayer.push({
+ 'event': 'new_service',
+ 'username' : 'usernamex1',
+ 'service_id': 'service_id',
+ 'featured' : false,
+ 'total_services' : 3,   // need for know the situation of seller, if know more x service send marketing emails for promote it
+ });
+
+
+
+// push on new order created
+window.dataLayer.push({
+ 'event': 'new_order',
+ 'username' : 'usernamex1',
+ 'service_id': 'service_id',
+ 'order_id' : 'order_id',
+ 'service_price' : 130.00, 
+ });
+
+
+
+
+// push on oreder is completed
+window.dataLayer.push({
+ 'event': 'order_completed',
+ 'username' : 'usernamex1',
+ 'service_id': 'service_id',
+ 'order_id' : 'order_id',
+ });
+
+
+// push on new order dispute
+window.dataLayer.push({
+ 'event': 'order_dispute',
+ 'username' : 'usernamex1',
+ 'service_id': 'service_id',
+ 'order_id' : 'order_id',
+ });
+
+
+</script>
