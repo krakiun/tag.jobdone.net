@@ -1,0 +1,115 @@
+<script>
+
+// example eccomerce by google -->  http://enhancedecommerce.appspot.com/
+
+
+// code to execute on new order.
+
+dataLayer.push({
+  "event": "transaction",
+  'ecommerce': {
+    'purchase': {
+      'actionField': {
+        'id': 'T1234567',                         // Transaction ID. Required for purchases and refunds.
+        'affiliation': 'Online Store',
+        'revenue': '35.43',                     // Total transaction value (incl. tax and shipping)
+        'tax':'4.90',
+        'shipping': '5.99',
+        'coupon': 'SUMMER_SALE'
+      },
+      'products': [{                            // List of productFieldObjects.
+        'name': 'Triblend Android T-Shirt 2',     // Name or ID is required.
+        'id': '12345',
+        'price': '15.25',
+        'brand': 'Google',
+        'category': 'Apparel',
+        'variant': 'Gray',
+        'quantity': 1,
+        'coupon': ''                            // Optional fields may be omitted or set to empty string.
+       }]
+    }
+  }
+});
+
+
+
+
+// services impresions   standard / featured services
+dataLayer.push({
+  "ecommerce": {
+    "currencyCode": "USD",
+    "impressions": [{
+      "id": "6d9b0",
+      "name": "Poyo T-Shirt",
+      "price": "62.00",
+      "brand": "Poyo",
+      "category": "T-Shirts",
+      "position": 0,
+      "list": "shirts you may like"
+    },
+    {
+      "id": "f6be8",
+      "name": "Comverges T-Shirt",
+      "price": "33.00",
+      "brand": "Comverges",
+      "category": "T-Shirts",
+      "position": 1,
+      "list": "shirts you may like"
+    }],
+    "promoView": {          // services fatured
+      "promotions": [{
+	      "id": "f6be8",
+	      "name": "Comverges T-Shirt",
+	      "price": "33.00",
+	      "brand": "Comverges",
+	      "category": "T-Shirts",
+	      "position": 1,
+	      "list": "shirts you may like"
+      }]
+    }
+  }
+});
+
+// services impresions featured
+
+
+// service click -- must execute this code on click on service
+dataLayer.push({
+  "event": "productClick",
+  "ecommerce": {
+    "click": {
+      "actionField": {
+        "list": "homepage"
+      },
+      "products": [{
+        "id": "b55da",
+        "name": "Flexigen T-Shirt",
+        "price": "16.00",
+        "brand": "Flexigen",
+        "category": "T-Shirts",
+        "position": "3"
+      }]
+    }
+  }
+});
+
+
+// service click -- must execute this code on click on featured service
+dataLayer.push({
+  "event": "promotionClick",
+  "ecommerce": {
+    "promoClick": {
+      "promotions": [{
+	        "id": "b55da",
+	        "name": "Flexigen T-Shirt",
+	        "price": "16.00",
+	        "brand": "Flexigen",
+	        "category": "T-Shirts",
+	        "position": "3"
+      }]
+    }
+  }
+});
+
+
+</script>

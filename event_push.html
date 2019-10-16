@@ -1,15 +1,28 @@
-<script>
-window.dataLayer = window.dataLayer || [];
+  <script>
+
+
+// this code must be loaded on load page. first to </head> tag
+window.dataLayer = [{
+	"user_id":"2139432",
+	"user_type":"buyer_seller",
+	"country":"Romania",
+	"email":"email@gmail.com",
+	"orders_completed":55,
+	"total_services" : 22,
+	"balance" : 0,
+}];
+
 
 
 // push new member register
 window.dataLayer.push({
- 'event': 'register_account',
- 'username' : 'usernamex1',
- 'register_method' : 'email', // email | facebook | google
- 'account_type': 'hire',   // hire | work | affiliate | hire_work
- 'funnel' : 'funnel_id',  //  if exist else none
- 'agent_referer' : 'referer' // if exist else none
+	 'event': 'register_account',
+	 'username' : 'usernamex1',
+	 'register_method' : 'email', // email | facebook | google
+	 'country' : 'IT',
+	 'account_type': 'hire',   // hire | work | affiliate | hire_work
+	 'funnel' : 'funnel_id',  //  if exist else none
+	 'agent_referer' : 'referer' // if exist else none
  });
 
 
@@ -19,6 +32,7 @@ window.dataLayer.push({
  'username': 'usernamex1',
  'amount_deposit' : 11.11,
  });
+
 
 
 // push new become seller
@@ -32,6 +46,7 @@ window.dataLayer.push({
 window.dataLayer.push({
  'event': 'account_deleted',
  'username': 'usernamex1',
+ 'reason' : "",  // 
  });
 
 
@@ -53,24 +68,14 @@ window.dataLayer.push({
 
 // push on new service added
 window.dataLayer.push({
- 'event': 'new_service',
- 'username' : 'usernamex1',
- 'service_id': 'service_id',
- 'featured' : false,
- 'total_services' : 3,   // need for know the situation of seller, if know more x service send marketing emails for promote it
+	 'event': 'new_service',
+	 'username' : 'usernamex1',
+	 'service_id': 'service_id',
+	 'featured' : false,
+	 'category' : 'category',
+	 'subcategory' : 'subcategory',
+	 'seller_services_count' : 'seller_services_count',
  });
-
-
-
-// push on new order created
-window.dataLayer.push({
- 'event': 'new_order',
- 'username' : 'usernamex1',
- 'service_id': 'service_id',
- 'order_id' : 'order_id',
- 'service_price' : 130.00, 
- });
-
 
 
 
